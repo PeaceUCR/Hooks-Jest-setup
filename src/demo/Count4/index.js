@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // hooks setState与class 的setState的差别
+// hooks setState should provide whole object, class setState just update the property needed
 const Count = () => {
   const [state, setState] = useState({
     title: '我是计数器4',

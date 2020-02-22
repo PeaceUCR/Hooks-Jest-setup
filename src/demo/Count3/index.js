@@ -5,10 +5,14 @@ const Count = () => {
   const stateRef = useRef(state);
   stateRef.current = state;
   const onChange = () => {
+    console.log('before setState')
+    console.log(state);
     setState({ ...state, count: 1 + state.count });
+    console.log('after setState')
+    console.log(state);
     setTimeout(() => {
       console.log('delay 1s:');
-      console.log(stateRef.current);
+      console.log(stateRef.current);// get updated stateRef
       console.log(state)
     }, 1000);
   };
